@@ -47,8 +47,18 @@ urlpatterns = [
     url(r'^treino/(?P<id_treino>\d+)/$', manipula_treino_por_id_treino),
     url(r'^treino/$', cria_treino),
 
-    url(r'^ficha/(?P<id_ficha>\d+)/$', manipula_ficha_por_id_ficha),
-    url(r'^ficha/$', cria_ficha),
+    url(r'^treinos/(?P<id_aluno>\d+)/$', recupera_treino_por_id_aluno),
+    url(r'^treinos/(?P<id_aluno>\d+)/(?P<dia>\d+)/$', recupera_treino_por_id_aluno_e_dia),
 
-    url(r'^fichas/(?P<id_usuario>\d+)/$', recupera_ficha_por_id_usuario),
+    # url(r'^ficha/(?P<id_ficha>\d+)/$', manipula_ficha_por_id_ficha),
+    # url(r'^ficha/$', cria_ficha),
+    #
+    # url(r'^fichas/(?P<id_usuario>\d+)/$', recupera_ficha_por_id_usuario),
+
+    # SEGUNDA OPCAO #
+    url(r'^modo-execucao/(?P<id_modo_execucao>\d+)/$', manipula_modo_execucao_exercicio_por_id_modo_execucao),
+    url(r'^modo-execucao/$', cria_modo_execucao_exercicio),
+
+    url(r'^modo-execucao-com-exercicio/(?P<id_aluno>\d+)/(?P<dia>\d+)/$', recupera_modo_execucao_exercicio_por_id_aluno_e_dia),
+
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

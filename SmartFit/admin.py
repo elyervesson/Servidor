@@ -8,4 +8,6 @@ admin.site.register(MedidaAluno)
 admin.site.register(Exercicio)
 admin.site.register(DescricaoExercicio)
 admin.site.register(Treino)
-admin.site.register(Ficha)
+# admin.site.register(Ficha)
+admin.site.register(ModoExecucaoExercicio)
+

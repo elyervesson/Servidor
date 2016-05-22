@@ -10,8 +10,6 @@ class InstrutorSerializer(serializers.ModelSerializer):
 
 
 class AlunoSerializer(serializers.ModelSerializer):
-    data_cadastrado = serializers.DateTimeField(read_only=True)
-
     class Meta:
         model = Aluno
 
@@ -25,6 +23,7 @@ class MedidaAlunoSerializer(serializers.ModelSerializer):
 
 class ExercicioSerializer(serializers.ModelSerializer):
     url_imagem = serializers.ImageField(max_length=None, use_url=True)
+
     class Meta:
         model = Exercicio
 
@@ -39,6 +38,12 @@ class TreinoSerializer(serializers.ModelSerializer):
         model = Treino
 
 
-class FichaSerializer(serializers.ModelSerializer):
+# class FichaSerializer(serializers.ModelSerializer):
+#     class Meta:
+#         model = Ficha
+
+# SEGUNDA OPCAO #
+
+class ModoExecucaoExercicioSerializer(serializers.ModelSerializer):
     class Meta:
-        model = Ficha
+        model = ModoExecucaoExercicio

@@ -188,34 +188,93 @@ def cria_treino(request):
     return Response(serializer.errors, status=400)
 
 
-@api_view(['GET', 'PUT'])
-def manipula_ficha_por_id_ficha(request, id_ficha):
+@api_view(['GET'])
+def recupera_treino_por_id_aluno(request, id_aluno):
     if request.method == 'GET':
-        ficha = Ficha.objects.get(pk=id_ficha)
-        serializer = FichaSerializer(ficha, many=False)
+        treinos = Treino.objects.filter(id_aluno=id_aluno)
+        serializer = TreinoSerializer(treinos, many=True)
+        return Response(serializer.data)
+    return Response(status=400)
+
+
+@api_view(['GET'])
+def recupera_treino_por_id_aluno_e_dia(request, id_aluno, dia):
+    if request.method == 'GET':
+        treinos = Treino.objects.filter(id_aluno=id_aluno, dia=dia)
+        serializer = TreinoSerializer(treinos, many=True)
+        return Response(serializer.data)
+    return Response(status=400)
+
+# @api_view(['GET', 'PUT'])
+# def manipula_ficha_por_id_ficha(request, id_ficha):
+#     if request.method == 'GET':
+#         ficha = Ficha.objects.get(pk=id_ficha)
+#         serializer = FichaSerializer(ficha, many=False)
+#         return Response(serializer.data)
+#     elif request.method == 'PUT':
+#         ficha = Ficha.objects.get(pk=id_ficha)
+#         serializer = FichaSerializer(instance=ficha, data=request.data)
+#         if serializer.is_valid():
+#             serializer.save()
+#             return Response(status=201)
+#         return Response(serializer.errors, status=400)
+#
+#
+# @api_view(['GET'])
+# def recupera_ficha_por_id_usuario(request, id_usuario):
+#     if request.method == 'GET':
+#         ficha = Ficha.objects.filter(id_aluno=id_usuario)
+#         serializer = FichaSerializer(ficha, many=True)
+#         return Response(serializer.data)
+#     return Response(status=400)
+#
+#
+# @api_view(['POST'])
+# def cria_ficha(request):
+#     serializer = FichaSerializer(data=request.data)
+#     if serializer.is_valid():
+#         serializer.save()
+#         return Response(status=201)
+#     return Response(serializer.errors, status=400)
+
+# SEGUNDA OPCAO # ModoExecucaoExercicioSerializer
+
+@api_view(['GET', 'PUT'])
+def manipula_modo_execucao_exercicio_por_id_modo_execucao(request, id_modo_execucao):
+    if request.method == 'GET':
+        modo_execucao = ModoExecucaoExercicio.objects.get(pk=id_modo_execucao)
+        serializer = ModoExecucaoExercicioSerializer(modo_execucao, many=False)
         return Response(serializer.data)
     elif request.method == 'PUT':
-        ficha = Ficha.objects.get(pk=id_ficha)
-        serializer = FichaSerializer(instance=ficha, data=request.data)
+        modo_execucao = ModoExecucaoExercicio.objects.get(pk=id_modo_execucao)
+        serializer = ModoExecucaoExercicioSerializer(instance=modo_execucao, data=request.data)
         if serializer.is_valid():
             serializer.save()
             return Response(status=201)
         return Response(serializer.errors, status=400)
 
 
-@api_view(['GET'])
-def recupera_ficha_por_id_usuario(request, id_usuario):
-    if request.method == 'GET':
-        ficha = Ficha.objects.filter(id_aluno=id_usuario)
-        serializer = FichaSerializer(ficha, many=True)
-        return Response(serializer.data)
-    return Response(status=400)
-
-
 @api_view(['POST'])
-def cria_ficha(request):
-    serializer = FichaSerializer(data=request.data)
+def cria_modo_execucao_exercicio(request):
+    serializer = ModoExecucaoExercicioSerializer(data=request.data)
     if serializer.is_valid():
         serializer.save()
         return Response(status=201)
     return Response(serializer.errors, status=400)
+
+
+@api_view(['GET'])
+def recupera_modo_execucao_exercicio_por_id_aluno_e_dia(request, id_aluno, dia):
+    if request.method == 'GET':
+        try:
+            modo_execucoes = ModoExecucaoExercicio.objects.get(id_aluno=id_aluno, dia_do_exercicio=dia)
+            serializer = ModoExecucaoExercicioSerializer(modo_execucoes, many=False)
+            exercicio = Exercicio.objects.get(pk=modo_execucoes.id_exercicio.id)
+            serializer_exercicio = ExercicioSerializer(exercicio, many=False)
+
+            data = {'exercicio': serializer_exercicio.data, 'modo_execucao': serializer.data}
+        except:
+            data = {'exercicio': None, 'modo_execucao': None}
+
+        return Response(data)
+    return Response(status=400)
