@@ -3,34 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="145083f5-354b-4b0c-a0df-8157ff97ede5" name="Default" comment="">
       <change type="DELETED" beforePath="$PROJECT_DIR$/SmartFit/migrations/0001_initial.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/media/exercicio/Leg-press.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/media/exercicio/agachamento-completo.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/media/exercicio/barra-fixa.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/media/exercicio/bicicleta.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/media/exercicio/cadeira-extensora-unilateral.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/media/exercicio/cadeira-extensora.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/media/exercicio/esteira.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/media/exercicio/passada-em-movimento.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/media/exercicio/passada-parada.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/media/exercicio/pulldown.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/media/exercicio/puxador-frontal-aberto.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/media/exercicio/remada-articulada.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/media/exercicio/remada-baixa-fechada-na-polia.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/media/exercicio/remada-serrador.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/media/exercicio/remada-unilateral.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/media/exercicio/rosca-concentrada.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/media/exercicio/rosca-direta-com-barra.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/media/exercicio/rosca-direta-com-halter.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/media/exercicio/rosca-invertida.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/media/exercicio/rosca-punho-invertida.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/media/exercicio/rosca-punho.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/media/exercicio/rosca-scott.jpg" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Servidor/urls.py" afterPath="$PROJECT_DIR$/Servidor/urls.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SmartFit/admin.py" afterPath="$PROJECT_DIR$/SmartFit/admin.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SmartFit/models.py" afterPath="$PROJECT_DIR$/SmartFit/models.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SmartFit/serializer.py" afterPath="$PROJECT_DIR$/SmartFit/serializer.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SmartFit/views.py" afterPath="$PROJECT_DIR$/SmartFit/views.py" />
     </list>
     <ignored path="Servidor.iws" />
     <ignored path=".idea/workspace.xml" />
